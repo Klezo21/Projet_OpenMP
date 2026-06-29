@@ -1,0 +1,16 @@
+# Exécutables et fichiers objets C
+*.o
+projet_matrice
+*.exe
+
+# Python et environnements
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Fichiers système ou d'éditeurs
+.DS_Store
+.vscode/
+.idea/
