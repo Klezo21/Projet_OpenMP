@@ -1,43 +1,43 @@
 #include "../include/matrix.h"
-
 #include <stdio.h>
+
+/* * Récupération du pointeur de fichier et de la fonction de journalisation 
+ * définis de manière globale dans le fichier main.c 
+ */
+extern FILE *log_file;
+extern void logPrintf(const char *format, ...);
 
 /*
  * ============================================================
- * Affiche les performances d'un test
+ * Affiche les performances d'un test à l'écran et dans le fichier log
  * ============================================================
  */
-
 void printBenchmark(const char *title,
                     double sequentialTime,
                     double parallelTime,
                     int threads)
 {
     double speedup = sequentialTime / parallelTime;
-
     double efficiency = speedup / threads;
 
-    printf("\n==============================================\n");
-    printf("%s\n", title);
-    printf("==============================================\n");
+    logPrintf("\n==============================================\n");
+    logPrintf("%s\n", title);
+    logPrintf("==============================================\n");
 
-    printf("Temps séquentiel : %.6f s\n", sequentialTime);
-    printf("Temps parallèle  : %.6f s\n", parallelTime);
+    logPrintf("Temps séquentiel : %.6f s\n", sequentialTime);
+    logPrintf("Temps parallèle  : %.6f s\n", parallelTime);
+    logPrintf("Threads          : %d\n", threads);
+    logPrintf("Speedup          : %.3f\n", speedup);
+    logPrintf("Efficacité       : %.3f\n", efficiency);
 
-    printf("Threads          : %d\n", threads);
-
-    printf("Speedup          : %.3f\n", speedup);
-
-    printf("Efficacité       : %.3f\n", efficiency);
-
-    printf("==============================================\n");
+    logPrintf("==============================================\n");
 }
+
 /*
  * ============================================================
  * Sauvegarde un résultat dans un fichier CSV
  * ============================================================
  */
-
 void saveCSV(const char *filename,
              int N,
              int threads,
@@ -48,12 +48,12 @@ void saveCSV(const char *filename,
 
     if (file == NULL)
     {
-        printf("Impossible d'ouvrir %s\n", filename);
+        // En cas d'erreur sur l'ouverture du CSV, on écrit l'alerte partout
+        logPrintf("Impossible d'ouvrir le fichier CSV %s\n", filename);
         return;
     }
 
     double speedup = sequentialTime / parallelTime;
-
     double efficiency = speedup / threads;
 
     fprintf(file,
@@ -67,19 +67,19 @@ void saveCSV(const char *filename,
 
     fclose(file);
 }
+
 /*
  * ============================================================
- * Création d'un fichier CSV
+ * Création d'un fichier CSV (Écrit l'en-tête de colonnes)
  * ============================================================
  */
-
 void createCSV(const char *filename)
 {
     FILE *file = fopen(filename, "w");
 
     if (file == NULL)
     {
-        printf("Impossible de créer %s\n", filename);
+        logPrintf("Impossible de créer le fichier CSV %s\n", filename);
         return;
     }
 

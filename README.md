@@ -2,12 +2,12 @@
 
 ## Architecture Parallèle – Projet de Fin de Session
 
-Ce projet a été réalisé individuellement dans le cadre du cours **Architecture Parallèle** du programme de **Master en Ingénierie des Données** de l'Université d'État d'Haïti (UEH).
+Ce projet a été réalisé individuellement dans le cadre du cours **Architecture Parallèle** du programme de **Certificat en Ingénierie des Données** de l'Université d'État d'Haïti (UEH).
 
 L'objectif est d'étudier les performances du calcul matriciel carré
 
 [
-C = A \times B
+C = A * B
 ]
 
 en comparant trois implémentations :
@@ -30,28 +30,29 @@ Le projet adopte une architecture modulaire afin de séparer les algorithmes de 
 Projet_OpenMP/
 │
 ├── include/
-│   └── matrix.h                     # Déclarations des fonctions, constantes et prototypes
+│   └── matrix.h                     # Déclarations des fonctions, macros globales (MIN) et prototypes
 │
 ├── src/
-│   ├── matrix.c                     # Gestion des matrices (allocation, initialisation, comparaison, temps)
-│   ├── sequential.c                 # Produit matriciel séquentiel de référence
-│   ├── openmp_naive.c               # Version parallèle OpenMP naïve
-│   ├── openmp_block.c               # Version parallèle optimisée par blocs (Blocking/Tiling)
-│   ├── benchmark.c                  # Mesures de performances, Speedup, Efficacité et export CSV
-│   └── main.c                       # Point d'entrée du programme
+│   ├── matrix.c                     # Gestion des matrices (allocation contiguë, initialisation, comparaison)
+│   ├── sequential.c                 # Produit matriciel séquentiel de référence (i-j-k)
+│   ├── openmp_naive.c               # Version parallèle OpenMP naïve (collapse)
+│   ├── openmp_block.c               # Version parallèle optimisée par blocs (Blocking/Tiling en i-k-j)
+│   ├── benchmark.c                  # Mesures de performances, Speedup, Efficacité et exports
+│   └── main.c                       # Point d'entrée refactorisé (runStrongScalability & runWeakScalability)
 │
 ├── results/
-│   ├── strong_scalability.csv       # Données expérimentales - Scalabilité forte
-│   ├── weak_scalability.csv         # Données expérimentales - Scalabilité faible
-│   ├── execution_time_strong.png    # Temps d'exécution - Scalabilité forte
-│   ├── speedup_strong.png           # Courbe de Speedup - Scalabilité forte
-│   ├── execution_time_weak.png      # Temps d'exécution - Scalabilité faible
-│   ├── speedup_weak.png             # Courbe de Speedup - Scalabilité faible
-│   └── efficiency_weak.png          # Courbe d'efficacité - Scalabilité faible
+│   ├── output.txt                   # Journal texte complet de la dernière exécution (copie de la console)
+│   ├── strong_scalability.csv       # Métriques brutes extraites - Scalabilité forte
+│   ├── weak_scalability.csv         # Métriques brutes extraites - Scalabilité faible
+│   ├── execution_time_strong.png    # Graphique : Temps d'exécution - Scalabilité forte
+│   ├── speedup_strong.png           # Graphique : Courbe de Speedup - Scalabilité forte
+│   ├── execution_time_weak.png      # Graphique : Temps d'exécution - Scalabilité faible
+│   ├── speedup_weak.png             # Graphique : Courbe de Speedup - Scalabilité faible
+│   └── efficiency_weak.png          # Graphique : Courbe d'efficacité - Scalabilité faible
 │
 ├── generate_plots.py                # Génération automatique des graphiques à partir des fichiers CSV
 │
-├── Makefile                         # Compilation automatique avec OpenMP (-O3 -fopenmp)
+├── Makefile                         # Compilation automatisée avec drapeaux d'optimisation (-O3 -fopenmp)
 │
 └── README.md                        # Documentation complète du projet
 ```

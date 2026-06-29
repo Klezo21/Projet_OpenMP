@@ -1,0 +1,207 @@
+=============================================
+ PRODUIT MATRICIEL PARALLELE AVEC OPENMP
+=============================================
+
+>>> DEBUT DE L'ETUDE : SCALABILITE FORTE (N = 1000) <<<
+Temps sequentiel de reference : 1.389000 secondes
+
+Naive (1 threads) : OK
+
+==============================================
+OpenMP Naif
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 1.249000 s
+Threads          : 1
+Speedup          : 1.112
+Efficacité       : 1.112
+==============================================
+Blocking (1 threads) : OK
+
+==============================================
+OpenMP Blocking
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.654000 s
+Threads          : 1
+Speedup          : 2.124
+Efficacité       : 2.124
+==============================================
+
+Naive (2 threads) : OK
+
+==============================================
+OpenMP Naif
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.609000 s
+Threads          : 2
+Speedup          : 2.281
+Efficacité       : 1.140
+==============================================
+Blocking (2 threads) : OK
+
+==============================================
+OpenMP Blocking
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.327000 s
+Threads          : 2
+Speedup          : 4.248
+Efficacité       : 2.124
+==============================================
+
+Naive (4 threads) : OK
+
+==============================================
+OpenMP Naif
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.370000 s
+Threads          : 4
+Speedup          : 3.754
+Efficacité       : 0.939
+==============================================
+Blocking (4 threads) : OK
+
+==============================================
+OpenMP Blocking
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.199000 s
+Threads          : 4
+Speedup          : 6.980
+Efficacité       : 1.745
+==============================================
+
+Naive (8 threads) : OK
+
+==============================================
+OpenMP Naif
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.291000 s
+Threads          : 8
+Speedup          : 4.773
+Efficacité       : 0.597
+==============================================
+Blocking (8 threads) : OK
+
+==============================================
+OpenMP Blocking
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.186000 s
+Threads          : 8
+Speedup          : 7.468
+Efficacité       : 0.933
+==============================================
+
+Naive (16 threads) : OK
+
+==============================================
+OpenMP Naif
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.259000 s
+Threads          : 16
+Speedup          : 5.363
+Efficacité       : 0.335
+==============================================
+Blocking (16 threads) : OK
+
+==============================================
+OpenMP Blocking
+==============================================
+Temps séquentiel : 1.389000 s
+Temps parallèle  : 0.192000 s
+Threads          : 16
+Speedup          : 7.234
+Efficacité       : 0.452
+==============================================
+
+>>> DEBUT DE L'ETUDE : SCALABILITE FAIBLE (Charge/Thread Constante) <<<
+
+----------------------------------
+Configuration Scalabilite Faible
+Threads : 1 | Taille Matrice : 1000 x 1000
+----------------------------------
+Validation : OK
+
+==============================================
+Weak Scalability (Blocking)
+==============================================
+Temps séquentiel : 1.084000 s
+Temps parallèle  : 0.662000 s
+Threads          : 1
+Speedup          : 1.637
+Efficacité       : 1.637
+==============================================
+
+----------------------------------
+Configuration Scalabilite Faible
+Threads : 2 | Taille Matrice : 1259 x 1259
+----------------------------------
+Validation : OK
+
+==============================================
+Weak Scalability (Blocking)
+==============================================
+Temps séquentiel : 3.582000 s
+Temps parallèle  : 0.645000 s
+Threads          : 2
+Speedup          : 5.553
+Efficacité       : 2.777
+==============================================
+
+----------------------------------
+Configuration Scalabilite Faible
+Threads : 4 | Taille Matrice : 1587 x 1587
+----------------------------------
+Validation : OK
+
+==============================================
+Weak Scalability (Blocking)
+==============================================
+Temps séquentiel : 8.465000 s
+Temps parallèle  : 0.844000 s
+Threads          : 4
+Speedup          : 10.030
+Efficacité       : 2.507
+==============================================
+
+----------------------------------
+Configuration Scalabilite Faible
+Threads : 8 | Taille Matrice : 2000 x 2000
+----------------------------------
+Validation : OK
+
+==============================================
+Weak Scalability (Blocking)
+==============================================
+Temps séquentiel : 21.319000 s
+Temps parallèle  : 1.756000 s
+Threads          : 8
+Speedup          : 12.141
+Efficacité       : 1.518
+==============================================
+
+----------------------------------
+Configuration Scalabilite Faible
+Threads : 16 | Taille Matrice : 2519 x 2519
+----------------------------------
+Validation : OK
+
+==============================================
+Weak Scalability (Blocking)
+==============================================
+Temps séquentiel : 35.111000 s
+Temps parallèle  : 3.266000 s
+Threads          : 16
+Speedup          : 10.750
+Efficacité       : 0.672
+==============================================
+
+=============================================
+ Fin du programme
+=============================================
