@@ -3,29 +3,29 @@
 =============================================
 
 >>> DEBUT DE L'ETUDE : SCALABILITE FORTE (N = 1000) <<<
-Temps sequentiel de reference : 1.389000 secondes
+Temps sequentiel de reference : 1.173000 secondes
 
 Naive (1 threads) : OK
 
 ==============================================
 OpenMP Naif
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 1.249000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 1.434000 s
 Threads          : 1
-Speedup          : 1.112
-Efficacité       : 1.112
+Speedup          : 0.818
+Efficacité       : 0.818
 ==============================================
 Blocking (1 threads) : OK
 
 ==============================================
 OpenMP Blocking
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.654000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 1.051000 s
 Threads          : 1
-Speedup          : 2.124
-Efficacité       : 2.124
+Speedup          : 1.116
+Efficacité       : 1.116
 ==============================================
 
 Naive (2 threads) : OK
@@ -33,22 +33,22 @@ Naive (2 threads) : OK
 ==============================================
 OpenMP Naif
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.609000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 1.104000 s
 Threads          : 2
-Speedup          : 2.281
-Efficacité       : 1.140
+Speedup          : 1.063
+Efficacité       : 0.531
 ==============================================
 Blocking (2 threads) : OK
 
 ==============================================
 OpenMP Blocking
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.327000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.775000 s
 Threads          : 2
-Speedup          : 4.248
-Efficacité       : 2.124
+Speedup          : 1.514
+Efficacité       : 0.757
 ==============================================
 
 Naive (4 threads) : OK
@@ -56,22 +56,22 @@ Naive (4 threads) : OK
 ==============================================
 OpenMP Naif
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.370000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.505000 s
 Threads          : 4
-Speedup          : 3.754
-Efficacité       : 0.939
+Speedup          : 2.323
+Efficacité       : 0.581
 ==============================================
 Blocking (4 threads) : OK
 
 ==============================================
 OpenMP Blocking
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.199000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.377000 s
 Threads          : 4
-Speedup          : 6.980
-Efficacité       : 1.745
+Speedup          : 3.111
+Efficacité       : 0.778
 ==============================================
 
 Naive (8 threads) : OK
@@ -79,22 +79,22 @@ Naive (8 threads) : OK
 ==============================================
 OpenMP Naif
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.291000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.328000 s
 Threads          : 8
-Speedup          : 4.773
-Efficacité       : 0.597
+Speedup          : 3.576
+Efficacité       : 0.447
 ==============================================
 Blocking (8 threads) : OK
 
 ==============================================
 OpenMP Blocking
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.186000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.321000 s
 Threads          : 8
-Speedup          : 7.468
-Efficacité       : 0.933
+Speedup          : 3.654
+Efficacité       : 0.457
 ==============================================
 
 Naive (16 threads) : OK
@@ -102,22 +102,22 @@ Naive (16 threads) : OK
 ==============================================
 OpenMP Naif
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.259000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.381000 s
 Threads          : 16
-Speedup          : 5.363
-Efficacité       : 0.335
+Speedup          : 3.079
+Efficacité       : 0.192
 ==============================================
 Blocking (16 threads) : OK
 
 ==============================================
 OpenMP Blocking
 ==============================================
-Temps séquentiel : 1.389000 s
-Temps parallèle  : 0.192000 s
+Temps séquentiel : 1.173000 s
+Temps parallèle  : 0.251000 s
 Threads          : 16
-Speedup          : 7.234
-Efficacité       : 0.452
+Speedup          : 4.673
+Efficacité       : 0.292
 ==============================================
 
 >>> DEBUT DE L'ETUDE : SCALABILITE FAIBLE (Charge/Thread Constante) <<<
@@ -131,11 +131,11 @@ Validation : OK
 ==============================================
 Weak Scalability (Blocking)
 ==============================================
-Temps séquentiel : 1.084000 s
-Temps parallèle  : 0.662000 s
+Temps séquentiel : 1.699000 s
+Temps parallèle  : 1.093000 s
 Threads          : 1
-Speedup          : 1.637
-Efficacité       : 1.637
+Speedup          : 1.554
+Efficacité       : 1.554
 ==============================================
 
 ----------------------------------
@@ -147,11 +147,11 @@ Validation : OK
 ==============================================
 Weak Scalability (Blocking)
 ==============================================
-Temps séquentiel : 3.582000 s
-Temps parallèle  : 0.645000 s
+Temps séquentiel : 5.887000 s
+Temps parallèle  : 1.087000 s
 Threads          : 2
-Speedup          : 5.553
-Efficacité       : 2.777
+Speedup          : 5.416
+Efficacité       : 2.708
 ==============================================
 
 ----------------------------------
@@ -163,11 +163,11 @@ Validation : OK
 ==============================================
 Weak Scalability (Blocking)
 ==============================================
-Temps séquentiel : 8.465000 s
-Temps parallèle  : 0.844000 s
+Temps séquentiel : 13.225000 s
+Temps parallèle  : 1.241000 s
 Threads          : 4
-Speedup          : 10.030
-Efficacité       : 2.507
+Speedup          : 10.657
+Efficacité       : 2.664
 ==============================================
 
 ----------------------------------
@@ -179,11 +179,11 @@ Validation : OK
 ==============================================
 Weak Scalability (Blocking)
 ==============================================
-Temps séquentiel : 21.319000 s
-Temps parallèle  : 1.756000 s
+Temps séquentiel : 30.298000 s
+Temps parallèle  : 1.723000 s
 Threads          : 8
-Speedup          : 12.141
-Efficacité       : 1.518
+Speedup          : 17.584
+Efficacité       : 2.198
 ==============================================
 
 ----------------------------------
@@ -195,11 +195,11 @@ Validation : OK
 ==============================================
 Weak Scalability (Blocking)
 ==============================================
-Temps séquentiel : 35.111000 s
-Temps parallèle  : 3.266000 s
+Temps séquentiel : 49.147000 s
+Temps parallèle  : 2.477000 s
 Threads          : 16
-Speedup          : 10.750
-Efficacité       : 0.672
+Speedup          : 19.841
+Efficacité       : 1.240
 ==============================================
 
 =============================================
